@@ -1,0 +1,809 @@
+/*----------------------------------------------------------------------------------------------------------*/
+/*-                                             Fintech Styles                                                           -*/
+/*----------------------------------------------------------------------------------------------------------*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Comfortaa:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@1&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none!important;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* Generals */
+html {
+    font-size: 22px;
+}
+
+@media (max-width: 960px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 720px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+button, 
+button:focus, 
+button:active,
+input:focus,
+textarea:focus {
+    outline: none;
+}
+
+body {
+    font-family: 'calibri', sans-serif;
+    background-color: var(--bg);
+    transition: all 700ms ease-in-out;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+/* Dark and light mode */
+.dark {
+    --bg: #1e202a;
+    --text: #fff;
+    --brand: #fff;
+    --nav: #252a41;
+    --card: #252a41;
+    --button: #fff;
+    --shadow: rgba(255, 255, 255, 0.8);
+}
+
+.light {
+    --bg: #f5f5f5;
+    --text: #252a41;
+    --brand: #004080;
+    --nav: #fff;
+    --card: #fff;
+    --button: #252a41;
+    --shadow: rgba(0, 0, 0, 0.10);
+}
+
+
+/* Form */
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form h2,
+form p {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+form button {
+    margin: 0.5rem auto;
+}
+
+.form2 a,
+.form2 a:hover,
+.form4 a,
+.form4 a:hover  {
+    color: #fff;
+}
+
+input {
+    /* width: 80%; */
+    padding: 0.2rem 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #252a41;
+    margin-bottom: 0.8rem;
+}
+
+input[type="date"] {
+    background: #66b3ff;
+    color: #fff;
+    font-weight: 700;
+    margin: 1rem auto;
+    padding: 0.6rem;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5rem;
+
+}
+
+select {
+    -webkit-appearance: none;
+    width: 90%;
+    font-size: 0.8rem;
+    font-family: calibri, sans-serif;
+    font-weight: 600;
+    background-color: var(--card);
+    color: var(--text);
+    padding: 0.5em 1em;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+     background-image: 
+    linear-gradient(
+        45deg,  transparent 50%, #66b3ff 50%, #66b3ff calc(50% + 1px), transparent calc(50% + 2px)
+    ), 
+    linear-gradient(
+        -45deg, transparent 50%, #66b3ff 50%, #66b3ff calc(50% + 1px), transparent calc(50% + 2px)
+    );
+    background-repeat: no-repeat;
+    background-position: 
+        right 23px  top calc(1em), 
+        right 15px  top calc(1em);
+    background-size: 8px 8px;
+    background-repeat: no-repeat;
+    transition: 500ms all ease-in;
+}
+
+
+/* Buttons */
+button {
+    background-color: #66b3ff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 700ms ease-in-out;
+}
+
+button:hover,
+button.blue {
+    background-color: #004080;
+}
+
+.edit {
+    background: none;
+    border: none;
+    color: #66b3ff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 700ms ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.edit:hover {
+    color: #004080;
+    background: none;
+}
+
+.edit-profile {
+    position: relative;
+}
+
+.profile-text p {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.assistent {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    bottom: 4rem;
+    right: 1rem;
+    background: #66b3ff;
+    border: none;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease-in-out;
+}
+
+.assistent:active {
+    transform: scale(0.95);
+}
+
+
+/* Containers */
+.container {
+    margin: 1rem auto;
+    padding-bottom: 7rem;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: var(--nav);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 700ms ease-in-out;
+}
+
+
+/* Pages */
+.brand {
+    font-family: 'JetBrains Mono', monospace;
+    color:  #66b3ff;
+    text-align: center;
+    transition: all 700ms ease-in-out;
+}
+
+.brand i {
+    color: var(--brand);
+    transition: all 700ms ease-in-out;
+}
+
+.brand span {
+    font-family: calibri, sans-serif;
+    font-weight: 200;
+}
+
+.user {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.user img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.user span {
+    color: #66b3ff;
+    font-weight: 600;
+    transition: all 700ms ease-in-out;
+}
+
+#mode {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    transition: all 700ms ease-in-out;
+}
+
+.card {
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px var(--shadow);
+    background-color: var(--card);
+    margin: 0.5rem auto;
+    transition: all 700ms ease-in-out;
+}
+
+.hero-ads {
+    height: auto;
+    min-height: 140px;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #b5b5b5;
+    font-weight: 600;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color:  var(--text);
+    font-weight: 600;
+    transition: all 700ms ease-in-out;
+}
+
+.card h6 {
+    font-size: 0.9rem;
+    color: #b5b5b5;
+    font-weight: 600;
+}
+
+.card .anuncios {
+    font-size: 0.8rem; 
+    color: #66b3ff; 
+    font-weight: 700;
+}
+
+.card .anuncios span {
+    color: var(--brand);
+    transition: all 700ms ease-in-out;
+}
+
+.qr-container {
+    background-color: #fff;
+    width: 250px;
+    height: 250px;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+}
+
+/* #reader {
+    width: 500px;
+    margin:  2rem auto;
+    outline: none;
+} */
+
+#reader video {
+    width: 100%; 
+    height: auto;
+}
+
+#reader button {
+    background-color: #66b3ff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 700ms ease-in-out;
+}
+
+#reader__status_span {
+    background-color: #66b3ff!important;
+    color: #fff!important;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 700ms ease-in-out;
+}
+
+#reader__dashboard_section_swaplink {
+    color: #66b3ff;
+    font-size: 1rem;
+    margin: 1rem auto;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 700ms ease-in-out;
+}
+
+#reader span {
+    font-size: 1rem;
+    color: #66b3ff;
+    font-weight: 600;
+}
+
+.fintech-box {
+    overflow: auto;
+    height: 400px;
+}
+
+.fintech-box::-webkit-scrollbar {
+    display: none;
+}
+
+.fintech-card {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 10px var(--shadow);
+    transition: all 700ms ease-in-out;
+}
+
+.fintech-target {
+    font-size: 1.2rem; 
+    color: #66b3ff; 
+    font-weight: 600;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    box-shadow: 0 5px 10px var(--shadow);
+    transition: all 700ms ease-in-out;
+}
+
+.fintech-target p {
+    color: var(--text);
+    transition: all 700ms ease-in-out;
+}
+
+.fintech-icon i {
+    font-size: 2rem;
+    color: var(--text);
+    transition: all 700ms ease-in-out;
+}
+
+.fintech-icon {
+    width: 3rem;
+}
+
+.fintech-text {
+    font-size: 0.9rem;
+    color: #66b3ff; 
+    font-weight: 700;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.fintech-cash {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.fintech-text .fintech-date,
+.fintech-cash p {
+    font-size: 0.8rem; 
+    color: #b5b5b5; 
+    font-weight: 700;
+}
+
+.fintech-text a {
+    font-size: 0.9rem; 
+    color: #66b3ff; 
+    font-weight: 700;
+    margin-bottom: 0;
+    padding: 0 0.6rem;
+}
+
+.fintech-text a span {
+    color: var(--brand);
+    transition: all 700ms ease-in-out;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter button {
+    margin: 1.5rem 0 0 0;
+}
+
+#timer {
+    color: var(--brand);
+    font-size: 1.5rem;
+}
+
+.target {
+    font-size: 1.2rem; 
+    color: #66b3ff; 
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.target p {
+    color: var(--text);
+    transition: all 700ms ease-in-out;
+}
+
+.card-ed {
+    opacity: 0.8;
+}
+
+.card-ed:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+.ed-text {
+    background: #004080;
+    padding: 1rem 2rem;
+    text-align: justify;
+    color: #fff;
+}
+
+.card-ed-text {
+    font-size: 0.9rem; 
+    color: #66b3ff; 
+    font-weight: 600;
+}
+
+.success-checkmark {
+    margin: 1rem auto;
+}
+
+.check-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    border-radius: 50%;
+    box-sizing: content-box;
+    border: 4px solid #4caf50;
+}
+    
+.check-icon::before {
+    top: 3px;
+    left: -2px;
+    width: 30px;
+    transform-origin: 100% 50%;
+    border-radius: 100px 0 0 100px;
+}
+
+.check-icon::after {
+    top: 0;
+    left: 30px;
+    width: 60px;
+    transform-origin: 0 50%;
+    border-radius: 0 100px 100px 0;
+    animation: rotate-circle 4.25s ease-in;
+}
+
+.check-icon::before, 
+.check-icon::after {
+    content: '';
+    height: 100px;
+    position: absolute;
+    background: var(--bg);
+    transform: rotate(-45deg);
+}
+
+.icon-line {
+    height: 5px;
+    background-color: #4caf50;
+    display: block;
+    position: absolute;
+    z-index: 10;
+}
+        
+.icon-line.line-tip {
+    top: 46px;
+    left: 14px;
+    width: 25px;
+    transform: rotate(45deg);
+    animation: icon-line-tip 0.75s;
+}
+
+.icon-line.line-long {
+    top: 38px;
+    right: 8px;
+    width: 47px;
+    transform: rotate(-45deg);
+    animation: icon-line-long 0.75s;
+}
+    
+.icon-circle {
+    top: -4px;
+    left: -4px;
+    z-index: 10;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    box-sizing: content-box;
+    border: 4px solid rgba(76, 175, 80, .5);
+}
+
+.icon-fix {
+    top: 8px;
+    width: 5px;
+    left: 26px;
+    z-index: 1;
+    height: 85px;
+    position: absolute;
+    transform: rotate(-45deg);
+    background-color: var(--bg);
+}
+
+@keyframes rotate-circle {
+    0% {
+        transform: rotate(-45deg);
+    }
+    5% {
+        transform: rotate(-45deg);
+    }
+    12% {
+        transform: rotate(-405deg);
+    }
+    100% {
+        transform: rotate(-405deg);
+    }
+}
+
+@keyframes icon-line-tip {
+    0% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    54% {
+        width: 0;
+        left: 1px;
+        top: 19px;
+    }
+    70% {
+        width: 50px;
+        left: -8px;
+        top: 37px;
+    }
+    84% {
+        width: 17px;
+        left: 21px;
+        top: 48px;
+    }
+    100% {
+        width: 25px;
+        left: 14px;
+        top: 45px;
+    }
+}
+
+@keyframes icon-line-long {
+    0% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    65% {
+        width: 0;
+        right: 46px;
+        top: 54px;
+    }
+    84% {
+        width: 55px;
+        right: 0px;
+        top: 35px;
+    }
+    100% {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+    }
+}
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #004080;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 700ms ease-in-out;
+}
+
+footer a,
+footer a:hover {
+    background: none;
+    border: none;
+    color: #fff;
+    opacity: 0.7;
+    font-size: 1.8rem;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: solid 2px #004080;
+}
+
+footer a p {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+footer a.add {
+    background: #004080;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    border: solid 3px #fff;
+    margin-top: -70px;
+    opacity: 1;
+}
+
+footer a.active {
+    opacity: 1;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.profile img {
+    width: 100%; 
+    height: 100%;
+}
+
+
+/* Modal */
+.add-btn {
+    height: 100%;
+    background-color: var(--card);
+    border: dashed 5px #b5b5b5;
+    color: #b5b5b5;
+}
+
+.add-btn:hover {
+    background-color: #b5b5b5;
+    border: dashed 5px #b5b5b5;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .qr-container {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer {
+        padding: 0.5rem 0;
+    }
+    
+    footer a {
+        font-size: 1.2rem;
+    }
+
+    footer a p {
+        display: none;
+    }
+
+    footer a.add {
+        margin-top: -40px;
+    }
+
+    .assistent {
+        width: 3.5rem;
+        height: 3.5rem;
+        bottom: 2.5rem;
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .assistent {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+    }
+}
